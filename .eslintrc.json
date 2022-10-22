@@ -1,0 +1,72 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "rules": {
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "arrow-body-style": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js", "jsx", ".ts", "tsx"]
+            }
+        ],
+        "prettier/prettier": "error",
+        "max-len": "off",
+        "react/prop-types": "off",
+        "react/destructuring-assignment": "off",
+        "linebreak-style": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "no-param-reassign": "off",
+        "camelcase": "off",
+        "react/prefer-stateless-function": "off",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "no-bitwise": "off",
+        "func-names": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-boolean-value": "off",
+        "react/forbid-prop-types": "off",
+        "import/extensions": "off",
+        "no-underscore-dangle": "off",
+        "import/no-named-default": "off",
+        "no-shadow": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "no-plusplus": "off",
+        "react/sort-comp": "off",
+        "react/no-multi-comp": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "no-console": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": 0,
+        "@typescript-eslint/no-unused-vars": "warn",
+        "no-unused-vars": "warn",
+        "no-alert": "off",
+        "react/function-component-definition": "off"
+    }
+}
