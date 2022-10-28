@@ -1,9 +1,0 @@
-.container {
-    box-shadow: var(--default-boxShadow);
-    display: flex;
-    flex-direction: column;
-    gap: var(--default-spacing);
-    padding: var(--default-spacing);
-    max-width: 350px;
-    margin: calc(2 * var(--default-spacing)) auto 0 auto;
-}

@@ -1,15 +1,15 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { Form } from './components/Form/Form';
+import { CssBaseline } from '@mui/material';
 import { Layout } from './components/Layout/Layout';
-import { theme } from './styles/muiTheme';
+import { DashboardPage } from './pages/Dashboard/Dashboard';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
     return (
         <div className="App">
             <CssBaseline />
-            <ThemeProvider theme={theme}>
+            <ThemeProvider>
                 <Layout>
-                    <Form />
+                    <DashboardPage />
                 </Layout>
             </ThemeProvider>
         </div>
