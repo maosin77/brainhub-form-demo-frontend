@@ -8,16 +8,11 @@ import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useStyles } from './Form.styles';
+import { useStyles } from './AddUserForm.styles';
+import { User } from '../../types/user';
+import apiClient from '../../httpClient/apiClient';
 
-interface FormModel {
-    firstName: string;
-    lastName: string;
-    email: string;
-    eventDate: Date;
-}
-
-const Form: React.FC = () => {
+export const AddUserForm: React.FC = () => {
     const classes = useStyles();
 
     const CreateFormSchema = yup.object({
@@ -41,13 +36,17 @@ const Form: React.FC = () => {
         register,
         control,
         formState: { errors },
-    } = useForm<FormModel>({
+    } = useForm<User>({
         mode: 'onSubmit',
         resolver: yupResolver(CreateFormSchema),
     });
 
-    const onSubmit = async (data: FormModel) => {
-        console.log(data);
+    const onSubmit = async (newUser: User) => {
+        try {
+            await apiClient.createUser(newUser);
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     return (
@@ -106,5 +105,3 @@ const Form: React.FC = () => {
         </form>
     );
 };
-
-export { Form };

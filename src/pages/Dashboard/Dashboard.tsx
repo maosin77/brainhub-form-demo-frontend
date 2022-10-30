@@ -1,5 +1,5 @@
 import { Paper, Grid } from '@mui/material';
-import { Form } from '../../components/Form/Form';
+import { AddUserForm } from '../../components/AddUserForm/AddUserForm';
 import { useStyles } from './Dashboard.styles';
 
 export const DashboardPage = () => {
@@ -8,7 +8,7 @@ export const DashboardPage = () => {
     return (
         <Paper className={classes.container}>
             <Grid container justifyContent="center" paddingTop={10}>
-                <Form />
+                <AddUserForm />
             </Grid>
         </Paper>
     );
