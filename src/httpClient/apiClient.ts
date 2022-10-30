@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-
 import axiosInstance from './instance';
 import { User } from '../types/user';
 
