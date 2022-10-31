@@ -9,7 +9,8 @@
         "prettier",
         "plugin:import/errors",
         "plugin:import/warnings",
-        "plugin:import/typescript"
+        "plugin:import/typescript",
+        "plugin:cypress/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,7 +20,13 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "prettier",
+        "cypress"
+    ],
     "settings": {
         "import/resolver": {
             "typescript": {}
@@ -68,6 +75,16 @@
         "no-unused-vars": "warn",
         "no-alert": "off",
         "react/function-component-definition": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+
+        "cypress/no-assigning-return-values": "error",
+        "cypress/no-unnecessary-waiting": "error",
+        "cypress/assertion-before-screenshot": "warn",
+        "cypress/no-force": "warn",
+        "cypress/no-async-tests": "error",
+        "cypress/no-pause": "error"
+    },
+    "globals": {
+        "cy": true
     }
 }
