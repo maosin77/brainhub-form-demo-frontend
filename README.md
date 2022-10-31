@@ -5,7 +5,7 @@ This micro-app contains a simple form. To achieve this amazing UI I've used [mui
 
 ### 1. Make sure port 3000 is not locked.
 ### 2. Install dependencies and run project.
-`$ yarn && yarn start`
+`$ yarn && yarn dev`
 
 #### Prerequisites:
 `suggested yarn version: 1.22.17`
