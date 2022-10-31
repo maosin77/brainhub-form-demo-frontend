@@ -10,3 +10,9 @@ This micro-app contains a simple form. To achieve this amazing UI I've used [mui
 #### Prerequisites:
 `suggested yarn version: 1.22.17`
 `suggested node version: 16.13.0`
+
+## How to run tests?
+
+### to run e2e tests
+`$ yarn run test:e2e`
+
